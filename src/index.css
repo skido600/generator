@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #309794;
+  font-family: "JetBrains Mono", monospace;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.check {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #309794;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+
+.check:checked {
+  background-color: #309794;
+}
+
+/* Custom checkmark */
+.check:checked::before {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center alignment */
+  font-size: 14px;
+}
+.slider {
+  accent-color: #309794;
+  width: 100%;
+}
